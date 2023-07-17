@@ -22,12 +22,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         drawerLayout = findViewById(R.id.drawer_layout);
-
     }
 
     public void ClickMenu(View view){opeDrawer(drawerLayout);}
 
-    private void opeDrawer(DrawerLayout){
+    private void opeDrawer(DrawerLayout drawerLayout){
         drawerLayout.openDrawer(GravityCompat.START);
     }
 
@@ -47,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void logOut(View view){
-
         logoutMenu(MainActivity.this);
 
     }
@@ -62,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
